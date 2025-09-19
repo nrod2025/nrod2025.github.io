@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
   <title>Mon CV – Landing Page</title>
   <style>
     /* Reset & global */
@@ -78,7 +78,7 @@
     .cta:hover {
       background: #218838;
     }
-    /* Liste compétences */
+    /* Skills list */
     .skills-list {
       display: flex;
       flex-wrap: wrap;
@@ -95,7 +95,7 @@
       font-weight: bold;
       font-size: 0.95em;
     }
-    /* Timeline expérience & éducation */
+    /* Timeline for expérience, éducation et projets */
     .timeline {
       position: relative;
       margin: 40px 0;
@@ -158,7 +158,8 @@
       <a href="#about">À propos</a>
       <a href="#skills">Compétences</a>
       <a href="#experience">Expérience</a>
-      <a href="#education">Éducation</a>
+      <a href="#education">Formation</a>
+      <a href="#projects">Projets</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="CV-PrénomNom.pdf" class="cta" download>Télécharger mon CV</a>
@@ -205,19 +206,90 @@
     </ul>
   </section>
 
-  <!-- ÉDUCATION -->
+  <!-- FORMATION -->
   <section id="education">
-    <h2>Éducation</h2>
+    <h2>Formation</h2>
     <ul class="timeline">
       <li>
-        <h3>Master Informatique – Université de XYZ</h3>
-        <span class="date">2019 – 2021</span>
-        <p>Spécialisation en développement web et applications mobiles.</p>
+        <h3>Master Energy Environment: Science Technology and Management – École Polytechnique</h3>
+        <span class="date">2022 – 2024</span>
+        <p>
+          Programme offrant une expertise technique en enjeux environnementaux et énergies renouvelables,
+          avec compréhension des défis économiques, sociaux et géopolitiques associés.
+        </p>
       </li>
       <li>
-        <h3>Licence Informatique – Université de XYZ</h3>
-        <span class="date">2016 – 2019</span>
-        <p>Parcours orienté algorithmie et systèmes d’information.</p>
+        <h3>Bachelor Chemical Engineering – University of Wolverhampton</h3>
+        <span class="date">2019 – 2022</span>
+        <p>
+          Parcours axé sur les principes de génie chimique, préparation à la modélisation de procédés industriels
+          et aux défis de l’ingénierie durable.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projects">
+    <h2>Projets</h2>
+    <ul class="timeline">
+      <li>
+        <h3>Analysis of a Rooftop PV Power Plant</h3>
+        <span class="date">Jan 2024 – Mar 2024</span>
+        <p>
+          Analyse des performances d’un système photovoltaïque de 52 panneaux (6 technologies, 2 inclinaisons).
+          Modélisation et prévision de la production et de l’irradiance solaire via machine learning et modèles physiques.
+          Évaluation de l’impact de l’ombrage et de la température sur l’efficacité des modules.
+        </p>
+      </li>
+      <li>
+        <h3>Eco-cost of Energy Transition – Offshore & Onshore Wind Farms</h3>
+        <span class="date">Jan 2023 – Mar 2023</span>
+        <p>
+          Étude des coûts environnementaux complets de parcs éoliens onshore et offshore via ACV et métriques de durabilité.
+          Analyse des matériaux, phases de vie, émissions et impact sur écosystèmes et communautés.
+        </p>
+      </li>
+      <li>
+        <h3>Minimising Cost & Optimizing Energy of Virtual Building</h3>
+        <span class="date">Jan 2023 – Mar 2023</span>
+        <p>
+          Développement d’un algorithme AMPL pour optimiser coûts et consommation énergétique d’un micro-réseau,
+          en maintenant le confort thermique (22 °C). Modélisation des échanges solaires, vent et réseau.
+        </p>
+      </li>
+      <li>
+        <h3>Perovskites Application for Thermal Energy Harvesting</h3>
+        <span class="date">Jan 2023 – Mar 2023</span>
+        <p>
+          Revue des structures perovskites pour conversion thermoélectrique, caractéristiques de performance,
+          défis et perspectives d’avenir.
+        </p>
+      </li>
+      <li>
+        <h3>Neural Networks for Approximation of ODEs</h3>
+        <span class="date">Sept 2022 – Déc 2022</span>
+        <p>
+          Implémentation d’approche par réseaux de neurones pour résoudre des EDO, comparaison coût calculatoire
+          avec méthode Euler. Ajustement des poids par rétro-optimisation.
+        </p>
+      </li>
+      <li>
+        <h3>Hazard Studies of Mobile Power Stations with Sodium-Ion Battery</h3>
+        <span class="date">Jan 2022 – Mai 2022</span>
+        <p>
+          Études de risques sur générateurs mobiles SIB + solaire en partenariat R&D (AceOn, DZP, Nevadic).
+          Comparaison technologies et revue bibliographique des dangers, protocoles de certification.
+        </p>
+      </li>
+      <li>
+        <h3>Design of Plant to Produce 1 M pH Strips – Johnson Test Papers</h3>
+        <span class="date">Sept 2021 – Avr 2022</span>
+        <p>
+          Conception d’une usine flexible pour fabriquer 1 M de bandelettes pH/mois. Diagrammes flux,
+          bilans matière/énergie, récupération de sous-produits, stratégie instrumentation & contrôle,
+          analyse économique.
+        </p>
       </li>
     </ul>
   </section>
