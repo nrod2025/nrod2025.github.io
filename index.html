@@ -3,57 +3,238 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mon site perso</title>
+  <title>Mon CV – Landing Page</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset & global */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
       background: #f4f4f4;
       color: #333;
+      scroll-behavior: smooth;
     }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    h1, h2, h3 {
+      margin-bottom: 0.5em;
+      color: #007BFF;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    /* Header */
     header {
       background: #007BFF;
       color: white;
-      padding: 40px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
-    section {
-      padding: 40px 20px;
-      text-align: center;
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
     }
-    .cta-button {
+    header p.subtitle {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+    nav {
+      margin-top: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 4px;
+      transition: background 0.3s;
+      font-size: 0.95em;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.4);
+    }
+    /* Bouton CTA */
+    .cta {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 35px;
       background: #28a745;
       color: white;
-      padding: 15px 30px;
-      text-decoration: none;
-      font-size: 18px;
       border-radius: 5px;
+      font-size: 1em;
+      transition: background 0.3s;
     }
+    .cta:hover {
+      background: #218838;
+    }
+    /* Liste compétences */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      list-style: none;
+      margin-top: 20px;
+    }
+    .skills-list li {
+      background: white;
+      padding: 10px 15px;
+      border-radius: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      font-weight: bold;
+      font-size: 0.95em;
+    }
+    /* Timeline expérience & éducation */
+    .timeline {
+      position: relative;
+      margin: 40px 0;
+      padding-left: 20px;
+      list-style: none;
+      text-align: left;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #007BFF;
+      border-radius: 2px;
+    }
+    .timeline li {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 30px;
+    }
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 16px;
+      height: 16px;
+      background: white;
+      border: 4px solid #007BFF;
+      border-radius: 50%;
+    }
+    .timeline li h3 {
+      margin-bottom: 0.2em;
+    }
+    .timeline li span.date {
+      font-size: 0.9em;
+      color: #666;
+      display: block;
+      margin-bottom: 0.5em;
+    }
+    /* Footer */
     footer {
       background: #222;
       color: white;
       text-align: center;
       padding: 20px;
-      font-size: 14px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Bienvenue sur notre site</h1>
-    <p>Découvrez nos services et rejoignez-nous dès aujourd'hui</p>
+  <!-- HEADER -->
+  <header id="home">
+    <h1>Prénom Nom</h1>
+    <p class="subtitle">Développeur Web & Intégrateur Front-end</p>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#skills">Compétences</a>
+      <a href="#experience">Expérience</a>
+      <a href="#education">Éducation</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="CV-PrénomNom.pdf" class="cta" download>Télécharger mon CV</a>
   </header>
 
-  <section>
-    <h2>Pourquoi nous choisir ?</h2>
-    <p>Nous offrons des solutions innovantes pour répondre à vos besoins.</p>
-    <a href="#contact" class="cta-button">Contactez-nous</a>
+  <!-- À PROPOS -->
+  <section id="about">
+    <h2>À propos de moi</h2>
+    <p>
+      Passionné par la création d’expériences web interactives, je conçois des interfaces modernes
+      et accessibles qui répondent aux besoins des utilisateurs.
+    </p>
   </section>
 
+  <!-- COMPÉTENCES -->
+  <section id="skills">
+    <h2>Compétences</h2>
+    <ul class="skills-list">
+      <li>HTML5 & CSS3</li>
+      <li>JavaScript (ES6+)</li>
+      <li>React.js</li>
+      <li>Vue.js</li>
+      <li>Git & GitHub</li>
+      <li>Responsive Design</li>
+      <li>Accessibilité (a11y)</li>
+      <li>Sass & Less</li>
+    </ul>
+  </section>
+
+  <!-- EXPÉRIENCE -->
+  <section id="experience">
+    <h2>Expérience professionnelle</h2>
+    <ul class="timeline">
+      <li>
+        <h3>Front-end Developer – Agence Web XYZ</h3>
+        <span class="date">2023 – Présent</span>
+        <p>Mise en place de sites e-commerce performants, intégration de maquettes Figma, optimisation SEO.</p>
+      </li>
+      <li>
+        <h3>Développeur Junior – Start-up Innov’Tech</h3>
+        <span class="date">2021 – 2023</span>
+        <p>Développement d’une plateforme SaaS, implémentation des tests unitaires et CI/CD.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ÉDUCATION -->
+  <section id="education">
+    <h2>Éducation</h2>
+    <ul class="timeline">
+      <li>
+        <h3>Master Informatique – Université de XYZ</h3>
+        <span class="date">2019 – 2021</span>
+        <p>Spécialisation en développement web et applications mobiles.</p>
+      </li>
+      <li>
+        <h3>Licence Informatique – Université de XYZ</h3>
+        <span class="date">2016 – 2019</span>
+        <p>Parcours orienté algorithmie et systèmes d’information.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contactez-moi</h2>
+    <p>Vous avez un projet ? Discutons-en !</p>
+    <p>
+      📧 <a href="mailto:prenom.nom@example.com">prenom.nom@example.com</a><br>
+      📞 06 12 34 56 78
+    </p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 Ma Société. Tous droits réservés.
+    &copy; 2025 Prénom Nom – Tous droits réservés
   </footer>
 
 </body>
